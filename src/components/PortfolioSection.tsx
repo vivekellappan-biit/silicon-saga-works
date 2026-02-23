@@ -2,38 +2,33 @@ import { motion } from "framer-motion";
 import devicesMockup from "@/assets/devices-mockup.png";
 
 const PortfolioSection = () => (
-  <section id="portfolio" className="py-24 bg-secondary/40">
-    <div className="container mx-auto px-6">
+  <section id="portfolio" className="py-32 bg-background px-6">
+    <div className="max-w-6xl mx-auto">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
-        className="text-center mb-16"
+        className="text-center mb-20"
       >
-        <span className="text-sm font-semibold tracking-widest uppercase text-primary">Portfolio</span>
-        <h2 className="text-3xl md:text-4xl font-bold mt-3 text-foreground">Recent Works</h2>
-        <p className="text-muted-foreground mt-4 max-w-xl mx-auto">
-          Cross-platform products built for startups and enterprises across the globe.
+        <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-foreground">Recent Works</h2>
+        <p className="text-muted-foreground mt-5 max-w-md mx-auto text-lg">
+          Cross-platform products built for startups and enterprises.
         </p>
       </motion.div>
 
       <motion.div
-        initial={{ opacity: 0, y: 40 }}
+        initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        transition={{ duration: 0.7 }}
-        className="relative max-w-5xl mx-auto"
+        transition={{ duration: 0.6 }}
+        className="max-w-4xl mx-auto"
       >
-        <div className="glass rounded-2xl p-4 md:p-8">
-          <img
-            src={devicesMockup}
-            alt="Cross-platform application showcased on laptop, tablet, and phone"
-            className="w-full h-auto rounded-lg"
-          />
-        </div>
-        {/* Decorative glow */}
-        <div className="absolute -inset-4 bg-primary/5 rounded-3xl blur-3xl -z-10" />
+        <img
+          src={devicesMockup}
+          alt="Applications shown on laptop, tablet, and phone"
+          className="w-full h-auto"
+        />
       </motion.div>
     </div>
   </section>

@@ -1,55 +1,56 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import heroBg from "@/assets/hero-bg.jpg";
 
 const HeroSection = () => (
-  <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-    {/* Background image */}
-    <div className="absolute inset-0">
-      <img src={heroBg} alt="Global software network" className="w-full h-full object-cover" />
-      <div className="absolute inset-0 bg-gradient-to-b from-[hsl(222,80%,10%)/0.6] via-[hsl(222,80%,10%)/0.7] to-[hsl(222,80%,10%)/0.9]" />
-    </div>
-
-    <div className="relative z-10 container mx-auto px-6 text-center pt-24">
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
+  <section className="min-h-screen flex items-center justify-center bg-background px-6">
+    <div className="max-w-3xl mx-auto text-center">
+      <motion.p
+        initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, delay: 0.2 }}
-        className="max-w-4xl mx-auto"
+        transition={{ duration: 0.5, delay: 0.1 }}
+        className="text-sm font-medium text-primary tracking-wide mb-6"
       >
-        <span className="inline-block mb-6 px-4 py-1.5 rounded-full text-xs font-semibold tracking-widest uppercase bg-primary/20 text-primary-foreground border border-primary/30">
-          Global Full-Stack Agency
-        </span>
+        Global Full-Stack Agency
+      </motion.p>
 
-        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight tracking-tight text-primary-foreground mb-6">
-          We Build the Software That{" "}
-          <span className="bg-gradient-to-r from-[hsl(222,80%,60%)] to-[hsl(270,70%,65%)] bg-clip-text text-transparent">
-            Powers Your Business
-          </span>
-        </h1>
+      <motion.h1
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+        className="text-5xl sm:text-6xl md:text-7xl font-bold leading-[1.08] tracking-tight text-foreground mb-8"
+      >
+        We build the software that powers your business.
+      </motion.h1>
 
-        <p className="text-lg md:text-xl text-[hsl(220,20%,75%)] max-w-2xl mx-auto mb-10 leading-relaxed">
-          End-to-end development for Web, Mobile, Cloud & Enterprise — delivered by a team that's built 500+ products worldwide.
-        </p>
+      <motion.p
+        initial={{ opacity: 0, y: 15 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.35 }}
+        className="text-lg md:text-xl text-muted-foreground max-w-xl mx-auto mb-10 leading-relaxed"
+      >
+        End-to-end development for Web, Mobile, Cloud & Enterprise — delivered by a global team.
+      </motion.p>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Button size="lg" className="glow-primary text-base px-8 py-6">
-            Start Your Project <ArrowRight className="ml-2" size={18} />
-          </Button>
-          <Button
-            variant="outline"
-            size="lg"
-            className="text-base px-8 py-6 border-[hsl(220,20%,30%)] text-primary-foreground bg-transparent hover:bg-primary/10"
-          >
-            View Our Work
-          </Button>
-        </div>
+      <motion.div
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.5 }}
+        className="flex flex-col sm:flex-row items-center justify-center gap-4"
+      >
+        <a
+          href="#"
+          className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-7 py-3.5 rounded-full text-sm font-medium hover:bg-primary/90 transition-colors"
+        >
+          Start a Project <ArrowRight size={16} />
+        </a>
+        <a
+          href="#portfolio"
+          className="text-sm font-medium text-primary hover:text-primary/80 transition-colors"
+        >
+          See our work →
+        </a>
       </motion.div>
     </div>
-
-    {/* Bottom fade */}
-    <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
   </section>
 );
 
