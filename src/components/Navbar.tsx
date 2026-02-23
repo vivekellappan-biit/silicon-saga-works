@@ -7,6 +7,7 @@ const navLinks = [
   { label: "Portfolio", href: "#portfolio" },
   { label: "Stats", href: "#stats" },
   { label: "Tech", href: "#tech" },
+  { label: "Contact", href: "#contact" },
 ];
 
 const Navbar = () => {
@@ -21,7 +22,7 @@ const Navbar = () => {
     >
       <div className="max-w-6xl mx-auto flex items-center justify-between py-4 px-6">
         <a href="#" className="text-lg font-semibold tracking-tight text-foreground">
-          NovaDev
+          sembiyan<span className="text-primary">.in</span>
         </a>
 
         <div className="hidden md:flex items-center gap-8">
@@ -34,7 +35,7 @@ const Navbar = () => {
               {link.label}
             </a>
           ))}
-          <a href="#" className="text-sm font-medium text-primary hover:text-primary/80 transition-colors">
+          <a href="mailto:info@sembiyan.in" className="text-sm font-medium text-primary hover:text-primary/80 transition-colors">
             Get in Touch
           </a>
         </div>
@@ -63,7 +64,7 @@ const Navbar = () => {
                   {link.label}
                 </a>
               ))}
-              <a href="#" className="text-sm font-medium text-primary">Get in Touch</a>
+              <a href="mailto:info@sembiyan.in" className="text-sm font-medium text-primary">Get in Touch</a>
             </div>
           </motion.div>
         )}
