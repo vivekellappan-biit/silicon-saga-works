@@ -4,15 +4,6 @@ import { ArrowRight } from "lucide-react";
 const HeroSection = () => (
   <section className="min-h-screen flex items-center justify-center bg-background px-6">
     <div className="max-w-3xl mx-auto text-center">
-      <motion.p
-        initial={{ opacity: 0, y: 10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.1 }}
-        className="text-sm font-medium text-primary tracking-wide mb-6"
-      >
-        Global Full-Stack Agency
-      </motion.p>
-
       <motion.h1
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -28,7 +19,7 @@ const HeroSection = () => (
         transition={{ duration: 0.5, delay: 0.35 }}
         className="text-lg md:text-xl text-muted-foreground max-w-xl mx-auto mb-10 leading-relaxed"
       >
-        End-to-end development for Web, Mobile, Cloud & Enterprise — delivered by a global team.
+        End-to-end development for Web, Mobile, Cloud & Enterprise.
       </motion.p>
 
       <motion.div

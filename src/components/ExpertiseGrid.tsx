@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Building2, Smartphone, Globe, Shield, Cloud, LayoutGrid } from "lucide-react";
+import { Building2, Smartphone, Globe, Shield, Cloud } from "lucide-react";
 
 const expertiseItems = [
   {
@@ -19,12 +19,6 @@ const expertiseItems = [
     title: "Web Platforms",
     description: "High-performance web applications built to scale.",
     featured: false,
-  },
-  {
-    icon: LayoutGrid,
-    title: "Facility Management",
-    description: "End-to-end FMS with real-time monitoring and IoT.",
-    featured: true,
   },
   {
     icon: Cloud,

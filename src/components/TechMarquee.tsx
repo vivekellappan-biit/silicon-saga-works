@@ -1,9 +1,33 @@
 import { motion } from "framer-motion";
+import {
+  Bell,
+  Cloud,
+  Code2,
+  Database,
+  GitBranch,
+  Server,
+  Shield,
+  Smartphone,
+  TestTube,
+  Zap,
+} from "lucide-react";
 
 const techItems = [
-  "React", "Flutter", "Python", "Node.js", "AWS", "Google Cloud",
-  "Azure", "Docker", "Kubernetes", "PostgreSQL", "MongoDB", "TypeScript",
-  "Swift", "Kotlin", "GraphQL", "Terraform",
+  { name: "Flutter", icon: Smartphone },
+  { name: "React Native", icon: Smartphone },
+  { name: "Android (Kotlin)", icon: Code2 },
+  { name: "iOS (Swift)", icon: Code2 },
+  { name: "Firebase", icon: Bell },
+  { name: "Push Notifications", icon: Zap },
+  { name: "Node.js APIs", icon: Server },
+  { name: "TypeScript", icon: Code2 },
+  { name: "PostgreSQL", icon: Database },
+  { name: "MongoDB", icon: Database },
+  { name: "AWS", icon: Cloud },
+  { name: "Google Cloud", icon: Cloud },
+  { name: "CI/CD", icon: GitBranch },
+  { name: "Testing", icon: TestTube },
+  { name: "App Security", icon: Shield },
 ];
 
 const TechMarquee = () => (
@@ -17,7 +41,9 @@ const TechMarquee = () => (
         className="text-center"
       >
         <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-foreground">Tech Stack</h2>
-        <p className="text-muted-foreground mt-5 text-lg">Technologies we work with every day.</p>
+        <p className="text-muted-foreground mt-5 text-lg">
+          Mobile-first technologies we use to ship production apps.
+        </p>
       </motion.div>
     </div>
 
@@ -28,10 +54,11 @@ const TechMarquee = () => (
       <div className="flex animate-marquee whitespace-nowrap">
         {[...techItems, ...techItems].map((tech, i) => (
           <span
-            key={`${tech}-${i}`}
-            className="inline-block mx-5 px-5 py-2.5 rounded-full border border-border text-sm text-muted-foreground whitespace-nowrap"
+            key={`${tech.name}-${i}`}
+            className="inline-flex items-center gap-2 mx-4 px-4 py-2.5 rounded-full border border-border text-sm text-muted-foreground whitespace-nowrap bg-card"
           >
-            {tech}
+            <tech.icon size={15} />
+            {tech.name}
           </span>
         ))}
       </div>

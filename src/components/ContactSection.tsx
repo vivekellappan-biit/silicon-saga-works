@@ -18,7 +18,8 @@ const ContactSection = () => (
         </p>
 
         <a
-          href="mailto:info@sembiyan.in"
+          href="mailto:info@sembiyan.in?subject=Project%20Inquiry&body=Hi%20Sembiyan%20team%2C%0A%0AI%20want%20to%20discuss%20a%20project.%0A"
+          aria-label="Send email to info@sembiyan.in"
           className="inline-flex items-center gap-2 mt-10 bg-primary text-primary-foreground px-7 py-3.5 rounded-full text-sm font-medium hover:bg-primary/90 transition-colors"
         >
           <Mail size={16} />
