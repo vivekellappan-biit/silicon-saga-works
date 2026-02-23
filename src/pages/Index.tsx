@@ -4,6 +4,7 @@ import ExpertiseGrid from "@/components/ExpertiseGrid";
 import PortfolioSection from "@/components/PortfolioSection";
 import StatsSection from "@/components/StatsSection";
 import TechMarquee from "@/components/TechMarquee";
+import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
 const Index = () => (
@@ -14,6 +15,7 @@ const Index = () => (
     <PortfolioSection />
     <StatsSection />
     <TechMarquee />
+    <ContactSection />
     <Footer />
   </div>
 );

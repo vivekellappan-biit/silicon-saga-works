@@ -38,7 +38,7 @@ const HeroSection = () => (
         className="flex flex-col sm:flex-row items-center justify-center gap-4"
       >
         <a
-          href="#"
+          href="mailto:info@sembiyan.in"
           className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-7 py-3.5 rounded-full text-sm font-medium hover:bg-primary/90 transition-colors"
         >
           Start a Project <ArrowRight size={16} />
