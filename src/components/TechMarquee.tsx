@@ -7,8 +7,8 @@ const techItems = [
 ];
 
 const TechMarquee = () => (
-  <section id="tech" className="py-20 bg-background overflow-hidden">
-    <div className="container mx-auto px-6 mb-12">
+  <section id="tech" className="py-28 bg-background overflow-hidden px-6">
+    <div className="max-w-6xl mx-auto mb-14">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -16,24 +16,23 @@ const TechMarquee = () => (
         transition={{ duration: 0.5 }}
         className="text-center"
       >
-        <span className="text-sm font-semibold tracking-widest uppercase text-primary">Technology</span>
-        <h2 className="text-3xl md:text-4xl font-bold mt-3 text-foreground">Our Tech Stack</h2>
+        <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-foreground">Tech Stack</h2>
+        <p className="text-muted-foreground mt-5 text-lg">Technologies we work with every day.</p>
       </motion.div>
     </div>
 
     <div className="relative">
-      {/* Fade edges */}
-      <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-background to-transparent z-10" />
-      <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-background to-transparent z-10" />
+      <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-background to-transparent z-10" />
+      <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-background to-transparent z-10" />
 
       <div className="flex animate-marquee whitespace-nowrap">
         {[...techItems, ...techItems].map((tech, i) => (
-          <div
+          <span
             key={`${tech}-${i}`}
-            className="inline-flex items-center mx-4 px-6 py-3 rounded-lg glass text-sm font-medium text-foreground whitespace-nowrap"
+            className="inline-block mx-5 px-5 py-2.5 rounded-full border border-border text-sm text-muted-foreground whitespace-nowrap"
           >
             {tech}
-          </div>
+          </span>
         ))}
       </div>
     </div>
